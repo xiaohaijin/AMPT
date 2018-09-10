@@ -1,0 +1,23 @@
+Subroutine savrec(i)
+  Implicit Double Precision (A-H, O-Z)
+  Parameter (maxptn=400001)
+  Common /prec2/gx(maxptn), gy(maxptn), gz(maxptn), ft(maxptn), px(maxptn), py(maxptn), pz(maxptn), e(maxptn), xmass(maxptn), ityp(maxptn)
+  Common /prec3/gxs(maxptn), gys(maxptn), gzs(maxptn), fts(maxptn), pxs(maxptn), pys(maxptn), pzs(maxptn), es(maxptn), xmasss(maxptn), ityps(maxptn)
+  Common /prec5/eta(maxptn), rap(maxptn), tau(maxptn)
+  Common /prec6/etas(maxptn), raps(maxptn), taus(maxptn)
+  Save
+  ityps(i) = ityp(i)
+  gxs(i) = gx(i)
+  gys(i) = gy(i)
+  gzs(i) = gz(i)
+  fts(i) = ft(i)
+  pxs(i) = px(i)
+  pys(i) = py(i)
+  pzs(i) = pz(i)
+  es(i) = e(i)
+  xmasss(i) = xmass(i)
+  etas(i) = eta(i)
+  raps(i) = rap(i)
+  taus(i) = tau(i)
+  Return
+End Subroutine savrec
