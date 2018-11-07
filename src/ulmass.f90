@@ -1,8 +1,12 @@
+!> \brief
+!>    由粒子的ID号，给出粒子的质量
 Function ulmass(kf)
+  !>==============================================================
+  !> 传入需要的两组lund参数，参看PYTHIA
+  !>==============================================================
   Common /ludat1/mstu(200), paru(200), mstj(200), parj(200)
-  Save /ludat1/
   Common /ludat2/kchg(500, 3), pmas(500, 4), parf(2000), vckm(4, 4)
-  Save /ludat2/
+  Save
   ulmass = 0.
   kfa = iabs(kf)
   kc = lucomp(kf)
